@@ -5,25 +5,206 @@
 		<title>LensCrafted::Gallery</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="lens.css">
+		
+		<script>
+		
+		function openModal(){
+			document.getElementById("myModal").style.display = "block";
+		}
+		
+		function closeModal(){
+			document.getElementById("myModal").style.display = "none";
+		}
+		
+		var slideIndex = 1;
+		
+		showSlides(slideIndex);
+		
+		function plusSlides(n){
+			showSlides(slideIndex += n)
+		}
+		
+		function currentSlide(n){
+			showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n){
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			
+			if (n > slides.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++){
+				slides[i].style.display = "none";
+			}
+			slides[slideIndex-1].style.display = "block";
+		}
+		</script>
+		
 	</head>
 	
 	<body>
-		<header><h1>Gallery</h1></header>
-		<nav>
-			<ul>Nav Bar Placeholder
-				<li><a href="index.html">Home</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="tutorials.html">Tutorials</a></li>
-				<li><a href="tutorials.html">Get Started</a></li>
-				<li><a href="about.html">About</a></li>
-			</ul>
-		</nav>
+	<div class="grid-container">
+		<header><img src="camera.svg" height="50" width="50"><h1>LensCrafted</h1></header>
+		<div class="navigation">
+			<a href="index.html"><div class="icon"><img src="home.svg" alt="home" height="24" width="24"></div></a>
+			
+			<a href="gallery.html"><div class="icon"><img src="squares.svg" alt="gallery" height="24" width="24"></div></a>
+			
+			<a href="tutorials.html"><div class="icon"><img src="school.svg" alt="tutorials" height="24" width="24"></div></a>
+			
+			<a href="about.html"><div class="icon"><img src="user.svg" alt="about" height="24" width="24"></div></a>
+		</div>
 		
 		<main>
-			<p>Pictures will go here<p>
+			<div class="photo-gallery">
+			
+			<div class="photo-thumb">
+				<img src="dc.jpg" alt="dc" style="width:150px" onclick="openModal();currentSlide(1)">
+				<p>Washington Monument</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="coffee.jpg" alt="coffee" style="width:150px" onclick="openModal();currentSlide(2)">
+				<p>Coffee at CHS Cafe</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="dog.jpg" alt="dog" style="width:150px" onclick="openModal();currentSlide(3)">
+				<p>Golda</p>
+			</div>
+
+			<div class="photo-thumb">
+				<img src="goat.jpg" alt="goat" style="width:150px" onclick="openModal();currentSlide(4)">
+				<p>Childhood goats</p>
+			</div>
+
+			<div class="photo-thumb">
+				<img src="orange_flower.jpg" alt="orange flower" style="width:150px" onclick="openModal();currentSlide(5)">
+				<p>Orange Lily</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="sign.jpg" alt="Cafe Sign" style="width:150px" onclick="openModal();currentSlide(6)">
+				<p>CHS Cafe</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="ant_flower.jpeg" alt="Ant and a flower" style="width:150px" onclick="openModal();currentSlide(7)">
+				<p>Ant and Flower</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="church.jpeg" alt="Church lit by green light" style="width:150px" onclick="openModal();currentSlide(8)">
+				<p>Church lit by traffic lights</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="moon.jpeg" alt="Moon over town" style="width:150px" onclick="openModal();currentSlide(9)">
+				<p>Moon and Venus</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="obelisk.jpeg" alt="Downtown Indianapolis" style="width:150px" onclick="openModal();currentSlide(10)">
+				<p>Downtown Indy</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="pavilion.jpeg" alt="Pavilion" style="width:150px" onclick="openModal();currentSlide(11)">
+				<p>Garden Pavilion</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="purp_flower.jpeg" alt="Purple Flower" style="width:150px" onclick="openModal();currentSlide(12)">
+				<p>Lunaria Annura</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="road.jpeg" alt="Road" style="width:150px" onclick="openModal();currentSlide(13)">
+				<p>Road</p>
+			</div>
+			
+			<div class="photo-thumb">
+				<img src="sunset.jpeg" alt="Sunset" style="width:150px" onclick="openModal();currentSlide(14)">
+				<p>Sunset over Muncie</p>
+			</div>
+			</div>
+			
+			
+			<div id="myModal" class="modal">
+				
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+				
+					<div class="mySlides">
+						<img src="dc.jpg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="coffee.jpg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="dog.jpg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="goat.jpg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="orange_flower.jpg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="sign.jpg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="ant_flower.jpeg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="church.jpeg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="moon.jpeg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="obelisk.jpeg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="pavilion.jpeg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="purp_flower.jpeg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="road.jpeg" style="width:100%">
+					</div>
+					
+					<div class="mySlides">
+						<img src="sunset.jpeg" style="width:100%">
+					</div>
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+			</div>
 		</main>
 		
-		<footer>Gallery controls here</footer>
+		<footer>&copy; 2025, Charlie Shaneck, All Rights Reserved <br> For more information contact me at <a href="mailto:cshaneck@ivytech.edu">cshaneck@ivytech.edu</a></footer>
+	</div>
 	</body>
 	
 </html>

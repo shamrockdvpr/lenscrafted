@@ -5,25 +5,129 @@
 		<title>LensCrafted</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="lens.css">
 	</head>
 	
 	<body>
-		<header><h1>LensCrafted</h1></header>
-		<nav>
-			<ul>Nav Bar Placeholder
-				<li><a href="index.html">Home</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="tutorials.html">Tutorials</a></li>
-				<li><a href="tutorials.html">Get Started</a></li>
-				<li><a href="about.html">About</a></li>
-			</ul>
-		</nav>
+	<div class="grid-container">
+		<header><img src="camera.svg" height="50" width="50"><h1>LensCrafted</h1></header>
+		<div class="navigation">		
+			
+			<a href="index.html"><div class="icon"><img src="home.svg" alt="home" height="24" width="24"></div></a>
+			
+			<a href="gallery.html"><div class="icon"><img src="squares.svg" alt="gallery" height="24" width="24"></div></a>
+			
+			<a href="tutorials.html"><div class="icon"><img src="school.svg" alt="tutorials" height="24" width="24"></div></a>
+			
+			<a href="about.html"><div class="icon"><img src="user.svg" alt="about" height="24" width="24"></div></a>
+			
+		</div>
 		
 		<main>
-			<p>Picture will go here<p>
+			
+			<h1 style="text-align:center; padding-top:20px">Welcome to Lens Crafted!</h1>
+			<hr>
+			<div style="display: flex; flex-direction: row; width: 100%; margin:25px auto; justify-content: space-around; flex-wrap: wrap">
+				<div style="margin:30px"><a class="homebutton" href="gallery.html">See More Photos</a></div>
+				
+				<div style="margin:30px"><a class="homebutton" href="tutorials.html">Get Started Taking Your Own Photos</a></div>
+				
+				<div style="margin:30px"><a class="homebutton" href="about.html">Learn More</a></div>
+			</div>
+			<hr>
+			<div class="slideshowContainer">
+				<div class="homeSlides">
+					<img src="dc.jpg" style="width:100%">
+				</div>
+				
+				<div class="homeSlides">
+					<img src="sunset.jpeg" style="width:100%">
+				</div>
+				
+				<div class="homeSlides">
+					<img src="moon.jpeg" style="width:100%">
+				</div>
+				
+				<div class="homeSlides">
+					<img src="pavilion.jpeg" style="width:100%">
+				</div>
+				
+				<div class="homeSlides">
+					<img src="dog.jpg" style="width:100%">
+				</div>
+				
+				<div class="homeSlides">
+					<img src="sign.jpg" style="width:100%">
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+				<div class="caption-container">
+					<p id=caption></p>
+				</div>
+				
+				<div class="row">
+					<div class="column">
+						<img class="demo cursor" src="dc.jpg" style="width:100%" onclick="currentSlide(1)" alt="Washington Monument from steps of Lincoln Memorial">
+					</div>
+					
+					<div class="column">
+						<img class="demo cursor" src="sunset.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Sunset over Muncie">
+					</div>
+					
+					<div class="column">
+						<img class="demo cursor" src="moon.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Christmas Moonrise and the Evening Star">
+					</div>
+					
+					<div class="column">
+						<img class="demo cursor" src="pavilion.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Garden Pavilion in summer">
+					</div>
+					
+					<div class="column">
+						<img class="demo cursor" src="dog.jpg" style="width:100%" onclick="currentSlide(5)" alt="Golda">
+					</div>
+					
+					<div class="column">
+						<img class="demo cursor" src="sign.jpg" style="width:100%" onclick="currentSlide(6)" alt="Carmel High School cafe">
+					</div>
+				</div>
+			</div>
 		</main>
 		
-		<footer>Gallery controls here</footer>
+		<footer>&copy; 2025, Charlie Shaneck, All Rights Reserved <br> For more information contact me at <a href="mailto:cshaneck@ivytech.edu">cshaneck@ivytech.edu</a></footer>
+	</div>
+	
+		<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				let i;
+				let slides = document.getElementsByClassName("homeSlides");
+				let dots = document.getElementsByClassName("demo");
+				let captionText = document.getElementById("caption");
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";
+				dots[slideIndex-1].className += " active";
+				captionText.innerHTML = dots[slideIndex-1].alt;
+				} 
+		</script>
 	</body>
 	
 </html>

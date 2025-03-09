@@ -5,25 +5,66 @@
 		<title>LensCrafted::Tutorials</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="lens.css">
+		
 	</head>
 	
 	<body>
-		<header><h1>Tutorials</h1></header>
-		<nav>
-			<ul>Nav Bar Placeholder
-				<li><a href="index.html">Home</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="tutorials.html">Tutorials</a></li>
-				<li><a href="tutorials.html">Get Started</a></li>
-				<li><a href="about.html">About</a></li>
-			</ul>
-		</nav>
+	<div class="grid-container">
+		<header><img src="camera.svg" height="50" width="50"><h1>LensCrafted</h1></header>
+		<div class="navigation">		
+			<a href="index.html"><div class="icon"><img src="home.svg" alt="home" height="24" width="24"></div></a>
+			
+			<a href="gallery.html"><div class="icon"><img src="squares.svg" alt="gallery" height="24" width="24"></div></a>
+			
+			<a href="tutorials.html"><div class="icon"><img src="school.svg" alt="tutorials" height="24" width="24"></div></a>
+			
+			<a href="about.html"><div class="icon"><img src="user.svg" alt="about" height="24" width="24"></div></a>
+		</div>
 		
 		<main>
-			<p>List of tutorials here<p>
+			<div class="tutorialContainer">
+				<a href="started.html">
+					<div class="tutorial">
+						<img src="road.jpeg" width="100%">
+						<div class="textcontainer">
+							<h2>Getting Started</h2>
+							<hr style="width:80%">
+							<p>You just got your first camera, but what are all these buttons? What is a white balance and isn't aperature from Portal? This guide will give you a brief rundown of all the basic settings on your camera and how to take your first pictures.</p>
+							<p class="mybutton">Read More</p>
+						</div>
+					</div>
+				</a>
+				
+				<a href="lighting.html">
+					<div class="tutorial">
+						<img src="moon.jpeg" width="100%">
+						<div class="textcontainer">
+							<h2>Lighting</h2>
+							<hr style="width:80%">
+							<p>Are your pictures way too dark or way too bright? This key part of pictures is exposure and in this guide you will learn the basics of the Exposure Triangle and how to take well lit photos.</p>
+							<p class="mybutton">Read More</p>
+						</div>
+					</div>
+				</a>
+				
+				<a href="composition.html">
+					<div class="tutorial">
+						<img src="obelisk.jpeg" width="100%">
+						<div class="textcontainer">
+							<h2>Composition</h2>
+							<hr style="width:80%">
+							<p>What makes a pretty picture? The main way photographers create interesting pictures is through composition, using ideas like the rule of thirds and leading lines. This guide will introduce you to using composition in your photos.</p>
+							<p class="mybutton">Read More</p>
+						</div>
+					</div>
+				</a>
+			
+			</div>
 		</main>
 		
-		<footer>Copyright stuff</footer>
+		<footer>&copy; 2025, Charlie Shaneck, All Rights Reserved <br> For more information contact me at <a href="mailto:cshaneck@ivytech.edu">cshaneck@ivytech.edu</a></footer>
+	</div>
 	</body>
 	
 </html>

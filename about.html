@@ -5,25 +5,88 @@
 		<title>LensCrafted::About</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="lens.css">
+		
 	</head>
 	
 	<body>
-		<header><h1>About</h1></header>
-		<nav>
-			<ul>Nav Bar Placeholder
-				<li><a href="index.html">Home</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="tutorials.html">Tutorials</a></li>
-				<li><a href="tutorials.html">Get Started</a></li>
-				<li><a href="about.html">About</a></li>
-			</ul>
-		</nav>
+	<div class="grid-container">
+		<header><img src="camera.svg" height="50" width="50" alt="camera logo"><h1>LensCrafted</h1></header>
+		<div class="navigation">		
+			<a href="index.html"><div class="icon"><img src="home.svg" alt="home" height="24" width="24"></div></a>
+			
+			<a href="gallery.html"><div class="icon"><img src="squares.svg" alt="gallery" height="24" width="24"></div></a>
+			
+			<a href="tutorials.html"><div class="icon"><img src="school.svg" alt="tutorials" height="24" width="24"></div></a>
+			
+			<a href="about.html"><div class="icon"><img src="user.svg" alt="about" height="24" width="24"></div></a>
+		</div>
 		
 		<main>
-			<p>About me info here<p>
-		</main>
+			<img src="firstcamera.jpg" width="10%" class="image-right" alt="My first camera">
+
+			<p class="main-content">Hi, my name is Charlie Shaneck and I'm an amateur photographer out of Indiana! I've been taking pictures since my parents bought me a Olympus Stylus Camera (shown right) as a kid. My favorite photography subjects are trees, flowers, and animals. My current camera is a Canon Digital Rebel TXI or my Iphone 13.</p>
+			<div style="display: flex;flex-direction: row">
+			
+				<a target="_blank" href="https://www.instagram.com/charlies_pictures_n_stuff/" style="margin:50px; padding:15px; background: linear-gradient(#e95950 , #bc2a8d );" class="custombutton"><img src="camera.svg" style="width: 25px" alt="camera logo"> Follow me on Instagram!</a>
+			
+				<a target="_blank" href="https://github.com/shamrockdvpr" style="margin:50px; padding:15px; background: linear-gradient(grey , white );" class="custombutton"><img src="github.png" style="width: 25px" alt="github logo"> Follow me on Github!</a>
+			
+				<a target="_blank" href="https://www.youtube.com/channel/UCcbICHXz9s_cv-jYDO1ZYEQ" style="margin:50px; padding:15px; background: linear-gradient(red , white );" class="custombutton"><img src="youtube.webp" style="width: 25px" alt="youtube logo"> Follow me on Youtube!</a>
+				
+			</div>
+			<br>
+			<br>
+			<hr>
+			<br>
+			<table>
+				<caption>My Lenses</caption>
+				<tr>
+					<th>Lens Name</th>
+					<th>Focal Length</th>
+					<th>Maximum Aperature</th>
+					<th>Diameter</th>
+					<th>Closest Focusing Distance</th>
+				</tr>
+				<tr>
+					<td>Canon Zoom Lens EF-S</td>
+					<td>18 - 55mm</td>
+					<td>1:3.5 - 5.6</td>
+					<td>58mm</td>
+					<td>0.28m/0.9ft</td>
+				</tr>
+				
+				<tr>
+					<td>Canon Zoom Lens EF</td>
+					<td>28 - 80mm</td>
+					<td>1:3.5 - 5.6</td>
+					<td>58mm</td>
+					<td>0.38m/1.3ft</td>
+				</tr>
+			</table>
+			<br>
+			<hr>
+			<br>
+			<h3 style="padding-left: 50px">Contact Me:</h3>
+			<p style="margin-left:50px">Required areas are marked with a *</p>
 		
-		<footer>Copyright here</footer>
+			
+			<form method=post>
+				<label for="MyFName">*First Name:</label>
+				<input type="text" id="MyFName" name="MyFName" required>
+				<label for="MyLName">*Last Name:</label>
+				<input type="text" id="MyLName" name="MyLName" required>
+				<label for="MyEmail">*Email:</label>
+				<input type="email" id="MyEmail" name="MyEmail" required>
+				<label for="MyComments">Comments:</label>
+				<textarea id="MyComments" name="MyComments"></textarea>
+				<button>Submit</button>
+				<div></div>
+				<button>Reset</button>
+			</form>
+		</main>
+		<footer>&copy; 2025, Charlie Shaneck, All Rights Reserved <br> For more information contact me at <a href="mailto:cshaneck@ivytech.edu">cshaneck@ivytech.edu</a></footer>
+	</div>
 	</body>
 	
 </html>
